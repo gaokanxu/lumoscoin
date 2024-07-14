@@ -1,0 +1,23 @@
+[package]
+name = "lumoscoin"
+authors = ["Gao Kanxu <gaokanxu@gmail.com>"]
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+solana-program = "1.7.11"
+borsh = "0.9.1"
+blake3 = "=1.4.1"
+memmap2 = "0.5.10"
+hashbrown = "0.11.2"
+hmac = "0.8.1"
+cc = "1.0.69"
+num-traits = "=0.2.18"
+ahash = "0.7.7"
+
+[build-dependencies]
+cc = "=1.0.69"
+
+[lib]
+crate-type = ["cdylib"]
+
