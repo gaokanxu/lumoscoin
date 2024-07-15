@@ -1,0 +1,8 @@
+{
+    "name": "LumosCoin",
+    "symbol": "LMC",
+    "uri": "https://raw.githubusercontent.com/gaokanxu/lumoscoin/main/metadata.json",
+    "seller_fee_basis_points": 50,
+    "creators": "Gao Kanxu <gaokanxu@gmail.com>"
+}
+
