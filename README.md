@@ -10,4 +10,4 @@
 总量: 10亿枚
 交易费用收取方法: 0.5%, 最少为 0.05 LMC
 
-<img src="lumscoin.png />
+<img src="lumoscoin.png />
