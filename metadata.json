@@ -1,0 +1,8 @@
+{
+  "name": "Lumos Coin",
+  "symbol": "LMC",
+  "decimals": 9,
+  "logoURI": "https://raw.githubusercontent.com/gaokanxu/lumoscoin/main/lumoscoin.png",
+  "description": "LumosCoin is a utility token for the business ecosystem.",
+  "seller_fee_basis_points": 50
+}
