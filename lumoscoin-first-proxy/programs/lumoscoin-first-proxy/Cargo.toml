@@ -1,19 +1,13 @@
 [package]
 name = "lumoscoin-first-proxy"
 version = "0.1.0"
-description = "Created with Anchor"
-edition = "2021"
+edition = "2018"
 
-[lib]
-crate-type = ["cdylib", "lib"]
-name = "lumoscoin_first_proxy"
+[dependencies]
+anchor-lang = "0.18.0"
+solana-program = "1.7.14"
+lumoscoin-second-proxy = { path = "../../../lumoscoin-second-proxy/programs/lumoscoin-second-proxy" }
 
 [features]
 no-entrypoint = []
-no-idl = []
-no-log-ix-name = []
-cpi = ["no-entrypoint"]
-default = []
 
-[dependencies]
-anchor-lang = "0.26.0"

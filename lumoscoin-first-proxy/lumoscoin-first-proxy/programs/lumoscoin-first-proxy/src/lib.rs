@@ -3,13 +3,13 @@ use anchor_lang::solana_program::program::invoke;
 use lumoscoin_logic::cpi::accounts::{Initialize, Increment};
 use lumoscoin_logic::program::LumoscoinLogic;
 
-declare_id!("SecondProxyContractID");
+declare_id!("FirstProxyContractID");
 
 #[program]
-pub mod lumoscoin_second_proxy {
+pub mod lumoscoin_first_proxy {
     use super::*;
 
-    pub fn second_proxy_initialize(ctx: Context<SecondProxyInitialize>, initial_count: u64) -> ProgramResult {
+    pub fn proxy_initialize(ctx: Context<ProxyInitialize>, initial_count: u64) -> ProgramResult {
         let logic_program = ctx.accounts.logic_program.to_account_info();
         let cpi_accounts = Initialize {
             counter: ctx.accounts.counter.to_account_info(),
@@ -20,7 +20,7 @@ pub mod lumoscoin_second_proxy {
         lumoscoin_logic::cpi::initialize(cpi_ctx, initial_count)
     }
 
-    pub fn second_proxy_increment(ctx: Context<SecondProxyIncrement>) -> ProgramResult {
+    pub fn proxy_increment(ctx: Context<ProxyIncrement>) -> ProgramResult {
         let logic_program = ctx.accounts.logic_program.to_account_info();
         let cpi_accounts = Increment {
             counter: ctx.accounts.counter.to_account_info(),
@@ -31,7 +31,7 @@ pub mod lumoscoin_second_proxy {
 }
 
 #[derive(Accounts)]
-pub struct SecondProxyInitialize<'info> {
+pub struct ProxyInitialize<'info> {
     #[account(mut)]
     pub counter: Account<'info, lumoscoin_logic::Counter>,
     #[account(mut)]
@@ -41,7 +41,7 @@ pub struct SecondProxyInitialize<'info> {
 }
 
 #[derive(Accounts)]
-pub struct SecondProxyIncrement<'info> {
+pub struct ProxyIncrement<'info> {
     #[account(mut)]
     pub counter: Account<'info, lumoscoin_logic::Counter>,
     pub logic_program: Program<'info, LumoscoinLogic>,
