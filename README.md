@@ -5,7 +5,7 @@
 
 符号: LMC
 
-支持网络: Solana
+支持网络: Lumos / Solana
 
 代币地址: 4r1ZWwPVmNhB7LmuBUBbDipkNDxwAQW1PY1knAnCTRGu
 
